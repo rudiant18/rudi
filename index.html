@@ -1,16 +1,121 @@
-<html>
-<title> UJIAN TENGAH SEMESTER GANJIL </title>
-<h1> Hai !</h1>
-<br>
-<img src="https://c.tenor.com/Z8ezUHZzcLoAAAAC/love.gif" />
-<h1> Maukah kamu menjadi pacarku?</h1>
-<button id="btn_mau" onclick="alert('I LOVE YOU')">Mau</button>
-&nbsp;
-<button id="btn_gamau" onclick="gamau(this)" style="position:absolute">Gamau</button> 
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maaf Ya Imbk Mahesi ❤️</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:linear-gradient(135deg,#ff9ec4,#ffd6e7);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    overflow:hidden;
+}
+
+.card{
+    background:white;
+    width:90%;
+    max-width:500px;
+    border-radius:20px;
+    padding:25px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+
+h1{
+    color:#ff4f8b;
+}
+
+p{
+    color:#555;
+    line-height:1.7;
+}
+
+button{
+    padding:12px 25px;
+    border:none;
+    border-radius:30px;
+    margin:10px;
+    cursor:pointer;
+    font-size:16px;
+    transition:.3s;
+}
+
+#yes{
+    background:#ff4f8b;
+    color:white;
+}
+
+#no{
+    background:#999;
+    color:white;
+    position:absolute;
+}
+
+.hearts{
+    position:fixed;
+    top:-20px;
+    font-size:24px;
+    animation:fall linear forwards;
+}
+
+@keyframes fall{
+    to{
+        transform:translateY(110vh);
+        opacity:0;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+<h1>🥺 Maaf Ya Imbk Mahesi ❤️</h1>
+
+<p>
+Imbk Mahesi...<br><br>
+
+Aku benar-benar minta maaf ya. 🙏🏻<br><br>
+
+Aku sadar mungkin ada ucapan atau sikapku yang membuat Imbk kecewa atau sakit hati. Aku tidak bermaksud seperti itu. Aku menyesal dan ingin memperbaiki semuanya.<br><br>
+
+Terima kasih sudah sabar menghadapi aku. Semoga Imbk bisa memaafkan aku ya. 🤍
+</p>
+
+<button id="yes" onclick="maaf()">Aku Maafkan 😊</button>
+<button id="no">Nggak Dulu 😜</button>
+
+</div>
+
+<script>
+function maaf(){
+    alert("Yeay!! 🥹❤️ Makasih banyak Imbk Mahesi. Aku janji akan jadi lebih baik.");
+
+    for(let i=0;i<40;i++){
+        let h=document.createElement("div");
+        h.innerHTML="❤️";
+        h.className="hearts";
+        h.style.left=Math.random()*100+"vw";
+        h.style.animationDuration=(3+Math.random()*3)+"s";
+        document.body.appendChild(h);
+
+        setTimeout(()=>h.remove(),6000);
+    }
+}
+
+const no=document.getElementById("no");
+
+no.addEventListener("mouseover",()=>{
+    no.style.left=Math.random()*80+"vw";
+    no.style.top=Math.random()*80+"vh";
+});
+</script>
+
 </body>
-<script> function gamau(id) 
-{var mau = document.getElementById("btn_mau"); 
-var i = Math.floor(Math.random() * 300) + 1; var j = Math.floor(Math.random() * 100) + mau.offsetTop;
-id.style.left = i + "px";
-id.style.top = x + "px";}</script>
 </html>
